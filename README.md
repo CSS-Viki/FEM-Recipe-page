@@ -32,7 +32,7 @@ Had alot of fun building this recipe page btw!
 
 ### Links
 
-- Live Site URL: [Live site](https://your-live-site-url.com)
+- Live Site URL: [Live site](https://recipe-page-7rak.onrender.com)
 
 Made with ❤️ by [Viki Wainaina](https://twitter.com/vykiddeh_)
 

@@ -6,6 +6,7 @@ $Eggshell: hsl(30, 54%, 90%);
 $Light-Grey: hsl(30, 18%, 87%);
 $Wenge-Brown: hsl(30, 10%, 34%);
 $Dark-Charcoal: hsl(24, 5%, 18%);
+
 *,
 *::before,
 *::after {
@@ -35,7 +36,7 @@ ol li {
 
 ul li::before {
   content: "\2022";
-  color: #000;
+  color: $Nutmeg;
   display: inline-block;
   width: 1em;
   margin-right: 20px;
@@ -90,6 +91,9 @@ main {
               color: $Dark-Charcoal;
             }
           }
+          li::before {
+            color: $Dark-Raspberry;
+          }
         }
       }
 
@@ -138,7 +142,6 @@ main {
             span {
               color: $Nutmeg;
               font-weight: 700;
-              align-self: flex-start;
             }
           }
           p + p {

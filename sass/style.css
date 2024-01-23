@@ -32,7 +32,7 @@ ol li {
 
 ul li::before {
   content: "•";
-  color: #000;
+  color: hsl(14, 45%, 36%);
   display: inline-block;
   width: 1em;
   margin-right: 20px;
@@ -75,6 +75,9 @@ main article .recipe-info .prep ul li + li {
 }
 main article .recipe-info .prep ul li strong {
   color: hsl(24, 5%, 18%);
+}
+main article .recipe-info .prep ul li::before {
+  color: hsl(332, 51%, 32%);
 }
 main article .recipe-info .ingredients .bold-brown,
 main article .recipe-info .instructions .bold-brown,
@@ -133,7 +136,6 @@ main article .recipe-info .nutrition .nutritional-values p {
 main article .recipe-info .nutrition .nutritional-values p span {
   color: hsl(14, 45%, 36%);
   font-weight: 700;
-  align-self: flex-start;
 }
 main article .recipe-info .nutrition .nutritional-values p + p {
   padding-block: 20px;
