@@ -18,7 +18,7 @@ picture {
 }
 
 html {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(30, 54%, 90%);
 }
 
 body {
@@ -45,6 +45,9 @@ ol li::before {
   margin-right: 20px;
 }
 
+main {
+  background-color: hsl(0, 0%, 100%);
+}
 main article .recipe-info {
   margin: 2em 1em;
 }
@@ -154,4 +157,23 @@ main article .recipe-info .nutrition .nutritional-values p:nth-child(1) {
 
 .attribution a {
   color: hsl(332, 51%, 32%);
+}
+
+@media (min-width: 600px) {
+  main {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding-block-start: 1.5em;
+  }
+  main article .recipe-image {
+    margin-inline: 2em;
+  }
+  main article .recipe-image img {
+    border-radius: 8px;
+  }
+  main article .recipe-info {
+    margin-inline: 2em;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -23,7 +23,7 @@ picture {
   max-width: 100%;
 }
 html {
-  background-color: $White;
+  background-color: $Eggshell;
 }
 body {
   font-family: "Outfit", sans-serif;
@@ -55,6 +55,7 @@ ol li::before {
   font-weight: 400;
 }
 main {
+  background-color: $White;
   article {
     .recipe-info {
       margin: 2em 1em;
@@ -165,4 +166,24 @@ main {
 }
 .attribution a {
   color: $Dark-Raspberry;
+}
+@media (min-width: 600px) {
+  main {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding-block-start: 1.5em;
+    article {
+      .recipe-image {
+        margin-inline: 2em;
+        img {
+          border-radius: 8px;
+        }
+      }
+      .recipe-info {
+        margin-inline: 2em;
+      }
+    }
+  }
 }
