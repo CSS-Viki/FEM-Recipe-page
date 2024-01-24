@@ -32,21 +32,23 @@ ol li {
 
 ul li::before {
   content: "•";
+  left: 2em;
+  position: absolute;
   color: hsl(14, 45%, 36%);
-  display: inline-block;
-  width: 1em;
-  margin-right: 20px;
+  font-weight: 700;
 }
 
 ol li::before {
   content: counter(list-item) ". "; /* Use counters for ordered lists */
+  left: 1.5em;
+  position: absolute;
   color: hsl(14, 45%, 36%);
   font-weight: 700;
-  margin-right: 20px;
 }
 
 main {
   background-color: hsl(0, 0%, 100%);
+  position: relative;
 }
 main article .recipe-info {
   margin: 2em 1em;
@@ -59,10 +61,11 @@ main article .recipe-info .recipe-name {
 }
 main article .recipe-info .about {
   color: hsl(30, 10%, 34%);
-  margin-block: 2em;
-  line-height: 1.4;
+  margin-block: 1.5em 2em;
+  line-height: 1.5;
 }
 main article .recipe-info .prep {
+  position: relative;
   background-color: hsl(330, 100%, 98%);
   padding: 2em;
   border-radius: 8px;
@@ -76,6 +79,11 @@ main article .recipe-info .prep p {
 main article .recipe-info .prep ul li + li {
   margin-block-start: 10px;
 }
+main article .recipe-info .prep ul li {
+  color: hsl(30, 10%, 34%);
+  margin-left: 30px;
+  line-height: 1.5;
+}
 main article .recipe-info .prep ul li strong {
   color: hsl(24, 5%, 18%);
 }
@@ -85,10 +93,10 @@ main article .recipe-info .prep ul li::before {
 main article .recipe-info .ingredients .bold-brown,
 main article .recipe-info .instructions .bold-brown,
 main article .recipe-info .nutrition .bold-brown {
-  margin-block-end: 20px;
   font-family: "Young Serif", serif;
   color: hsl(14, 45%, 36%);
   font-weight: 400;
+  margin-block-end: 20px;
 }
 main article .recipe-info .ingredients ul li + li,
 main article .recipe-info .ingredients ol li + li,
@@ -105,6 +113,8 @@ main article .recipe-info .instructions ol li,
 main article .recipe-info .nutrition ul li,
 main article .recipe-info .nutrition ol li {
   color: hsl(30, 10%, 34%);
+  margin-left: 50px;
+  line-height: 1.5;
 }
 main article .recipe-info .ingredients ul li strong,
 main article .recipe-info .ingredients ol li strong,
@@ -113,6 +123,14 @@ main article .recipe-info .instructions ol li strong,
 main article .recipe-info .nutrition ul li strong,
 main article .recipe-info .nutrition ol li strong {
   color: hsl(24, 5%, 18%);
+}
+main article .recipe-info .ingredients ul li::before,
+main article .recipe-info .ingredients ol li::before,
+main article .recipe-info .instructions ul li::before,
+main article .recipe-info .instructions ol li::before,
+main article .recipe-info .nutrition ul li::before,
+main article .recipe-info .nutrition ol li::before {
+  left: 1.5em;
 }
 main article .recipe-info .ingredients,
 main article .recipe-info .instructions {
@@ -131,10 +149,10 @@ main article .recipe-info .nutrition .nutritional-values {
   flex-direction: column;
 }
 main article .recipe-info .nutrition .nutritional-values p {
-  padding-inline: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-inline: 50px 150px;
 }
 main article .recipe-info .nutrition .nutritional-values p span {
   color: hsl(14, 45%, 36%);
@@ -152,6 +170,7 @@ main article .recipe-info .nutrition .nutritional-values p:nth-child(1) {
 
 .attribution {
   font-size: 0.8rem;
+  font-weight: 700;
   text-align: center;
 }
 

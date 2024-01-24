@@ -28,7 +28,19 @@ html {
 body {
   font-family: "Outfit", sans-serif;
 }
+@mixin bold-brown-style {
+  font-family: "Young Serif", serif;
+  color: $Nutmeg;
+  font-weight: 400;
+  margin-block-end: 20px;
 
+}
+
+@mixin ul-ol-styles {
+  position: absolute;
+  color: $Nutmeg;
+  font-weight: 700;
+}
 ul li,
 ol li {
   list-style: none;
@@ -36,26 +48,19 @@ ol li {
 
 ul li::before {
   content: "\2022";
-  color: $Nutmeg;
-  display: inline-block;
-  width: 1em;
-  margin-right: 20px;
+  left: 2em;
+  @include ul-ol-styles();
 }
 
 ol li::before {
   content: counter(list-item) ". "; /* Use counters for ordered lists */
-  color: $Nutmeg;
-  font-weight: 700;
-  margin-right: 20px;
+  left: 1.5em;
+  @include ul-ol-styles();
 }
 
-@mixin bold-brown-style {
-  font-family: "Young Serif", serif;
-  color: $Nutmeg;
-  font-weight: 400;
-}
 main {
   background-color: $White;
+  position: relative;
   article {
     .recipe-info {
       margin: 2em 1em;
@@ -68,11 +73,12 @@ main {
       }
       .about {
         color: $Wenge-Brown;
-        margin-block: 2em;
-        line-height: 1.4;
+        margin-block: 1.5em 2em;
+        line-height: 1.5;
       }
 
       .prep {
+        position: relative;
         background-color: $Rose-White;
         padding: 2em;
         border-radius: 8px;
@@ -88,6 +94,9 @@ main {
             margin-block-start: 10px;
           }
           li {
+            color: $Wenge-Brown;
+            margin-left: 30px;
+            line-height: 1.5;
             strong {
               color: $Dark-Charcoal;
             }
@@ -102,7 +111,6 @@ main {
       .instructions,
       .nutrition {
         .bold-brown {
-          margin-block-end: 20px;
           @include bold-brown-style();
         }
         ul,
@@ -112,10 +120,14 @@ main {
           }
           li {
             color: $Wenge-Brown;
-
+            margin-left: 50px;
+            line-height: 1.5;
             strong {
               color: $Dark-Charcoal;
             }
+          }
+          li::before {
+            left: 1.5em;
           }
         }
       }
@@ -136,10 +148,11 @@ main {
           flex-direction: column;
 
           p {
-            padding-inline: 50px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding-inline: 50px 150px;
+
             span {
               color: $Nutmeg;
               font-weight: 700;
@@ -162,6 +175,7 @@ main {
 }
 .attribution {
   font-size: 0.8rem;
+  font-weight: 700;
   text-align: center;
 }
 .attribution a {
@@ -174,6 +188,7 @@ main {
     margin: 0 auto;
     border-radius: 8px;
     padding-block-start: 1.5em;
+
     article {
       .recipe-image {
         margin-inline: 2em;
