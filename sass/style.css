@@ -180,7 +180,7 @@ main article .recipe-info .nutrition .nutritional-values p:nth-child(1) {
 
 @media (min-width: 600px) {
   main {
-    max-width: 500px;
+    max-width: 550px;
     width: 100%;
     margin: 0 auto;
     border-radius: 8px;
